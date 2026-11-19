@@ -1,10 +1,7 @@
 const squareStyle = {
-  height: "100px",
-  width: "100px"
-};
-
-export default function Square(props) {
-  return (
-    <button style={squareStyle}>{props.value}</button>
-  );
+    height: "100px",
+    width: "100px"
+}
+export default function Square(props){
+    return <button style={squareStyle} onClick={()=>props.boardClick(props.rowIndex, props.columnIndex)}>{props.value}</button>
 }

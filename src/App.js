@@ -11,14 +11,23 @@ function App() {
   const [values, setValues] = useState([
     ["X", "-", "-"],
     ["-", "-", "-"],
-    ["-", "-", "-"],
+    ["-", "-", "-"]
   ]);
+
+  function appClick(rowNumber, columnNumber) {
+    console.log("CLICK en " + rowNumber + columnNumber);
+    let valuesCopy = JSON.parse(JSON.stringify(values));
+    let newMovement = turn === PLAYERX ? "X" : "O";
+    valuesCopy[rowNumber][columnNumber] = newMovement;
+    setTurn(turn===PLAYERX ? PLAYERO:PLAYERX);
+    setValues(valuesCopy);
+  }
 
   return (
     <div className="App">
       <h2>TicTacToe</h2>
       <Header turn={turn} />
-      <Board values={values} />
+      <Board values={values} appClick={appClick} />
     </div>
   );
 }
