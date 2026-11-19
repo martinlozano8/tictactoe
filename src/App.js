@@ -9,7 +9,7 @@ const PLAYERO = "Player 2 - Os";
 function App() {
   const [turn, setTurn] = useState(PLAYERO);
   const [values, setValues] = useState([
-    ["-", "-", "-"],
+    ["X", "-", "-"],
     ["-", "-", "-"],
     ["-", "-", "-"],
   ]);
