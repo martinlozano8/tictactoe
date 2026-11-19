@@ -1,4 +1,5 @@
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {useState, useEffect} from "react";
 import Header from './Header'
 import Board from './Board'
